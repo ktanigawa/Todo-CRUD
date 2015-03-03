@@ -1,12 +1,16 @@
 extends ./layout.jade
 block content
   #container
-    ul#toDoList
-      li
-        input(type="checkbox") 
-        h3 Title of to do
-        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, illum, ad. Explicabo omnis, ipsam nemo illo doloribus, necessitatibus ducimus sapiente iure harum dolor officiis officia! Quas, unde consequuntur? Neque, tenetur!
-        button X
+    for list in userlist
+      p= list
+      ul#toDoList
+        li.item
+          input(type="checkbox" )
+          //- span.title= item.title
+          h3= list.title
+          p= list.description
+          //- command shift right
+          button X
 
   h1 to do list
   a(href="/new_item") New Item Page

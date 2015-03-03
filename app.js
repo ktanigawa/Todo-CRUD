@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
+// /list is pointing to database name
 mongoose.connect('mongodb://localhost/list');
 var Schema = mongoose.Schema;
 
@@ -13,7 +14,7 @@ var toDoSchema = new Schema({
   created_at: Date
 });
 // lets you save and get find() todos
-var Todo = mongoose.model('todo', toDoSchema);
+var ToDo = mongoose.model('todo', toDoSchema);
 
 
 
@@ -23,7 +24,15 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.set('view engine', 'jade');
 
 app.get('/', function (req, res) {
-  res.render('index');
+  // res.render('index');
+  // function
+  ToDo.find(function(err, lists){
+    if (err) throw err;
+    // IDK
+    console.log(lists);
+    res.render('index', { userlist : lists });
+  });
+
 });
 
 app.get('/new_item', function (req, res) {
@@ -33,6 +42,20 @@ app.get('/new_item', function (req, res) {
 // Reads in the server console logs {} objects
 app.post('/new_item', function (req, res) {
   console.log(req.body);
+
+  var newToDo = new ToDo({
+    title: req.body.title,
+    description: req.body.description,
+    is_done: false,
+    created_at: new Date()
+  });
+  console.log(newToDo);
+  newToDo.save(function (err){
+    if (err) {
+      throw err;
+    }
+    console.log('saved');
+  });
 });
 
 app.get('/edit_item', function (req, res) {
