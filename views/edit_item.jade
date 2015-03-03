@@ -4,11 +4,12 @@ block title
   title Edit Item
 block content
   h1 Edit Item
-  form(action="", method="POST")
+  form(action="/edit_item/#{todo._id}?_method=PUT", method="POST")
     fieldset
       div
-        input(type="text", placeholder="Title")
+        input(type="text", name="title", value="#{todo.title}")
       div
-        textarea(type="text", placeholder="Box")
+        textarea(type="text", name="description")
+          =todo.description
       div
         input(type="submit", value="Submit")

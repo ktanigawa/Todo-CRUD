@@ -6,7 +6,8 @@ block content
       for list in userlist
         li.list
           input(type="checkbox" )
-          span.title= list.title
+          span.title
+            a(href="/edit_item/#{list._id}")= list.title
           p= list.description
           form(action="/list/#{list._id}?_method=DELETE", method="POST")
             button X

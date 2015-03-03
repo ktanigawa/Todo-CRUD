@@ -63,8 +63,22 @@ app.post('/new_item', function (req, res) {
   });
 });
 
-app.get('/edit_item', function (req, res) {
-  res.render('edit_item');
+app.get('/edit_item/:id', function (req, res) {
+  ToDo.findOne({_id : req.params.id}, function (err, todo){
+    if (err) throw err;  
+    res.render('edit_item', { todo : todo});
+  });
+});
+//updates uses put
+app.put('/edit_item/:id', function (req, res) {
+  ToDo.findOneAndUpdate({_id : req.params.id}, { $set: {
+    title : req.body.title,
+    description : req.body.description
+
+  }}, function (err, todo){
+    if (err) throw err;
+    res.redirect('/');
+  });
 });
 
 app.delete('/list/:id', function (req, res){
