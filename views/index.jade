@@ -8,8 +8,8 @@ block content
           input(type="checkbox", data-list-id="#{list._id}", data-checked="#{list.is_done}")
           span.title
             a(href="/edit_item/#{list._id}")= list.title
-          p= list.description
-          form(action="/list/#{list._id}?_method=DELETE", method="POST")
+          span= list.description
+          form.toDoForm(action="/list/#{list._id}?_method=DELETE", method="POST")
             button X
 
   h1 to do list
