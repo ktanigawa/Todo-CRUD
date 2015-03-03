@@ -1,7 +1,10 @@
 extends ./layout.jade
+
+block title 
+  title Edit Item
 block content
   h1 Edit Item
-  form(action="")
+  form(action="", method="POST")
     fieldset
       div
         input(type="text", placeholder="Title")

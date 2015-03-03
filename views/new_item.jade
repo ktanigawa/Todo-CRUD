@@ -1,11 +1,14 @@
 extends ./layout.jade
+
+block title
+  title New Item
 block content
   h1 New Item
-  form(action="")
+  form(action="/new_item", method="POST")
     fieldset
       div
-        input(type="text", placeholder="Title")
+        input(type="text", name="title", placeholder="Title")
       div
-        textarea(type="text", placeholder="Box")
+        textarea(type="text", name="content", placeholder="Box")
       div
         input(type="submit", value="Submit")

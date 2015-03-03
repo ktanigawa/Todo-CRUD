@@ -15,9 +15,11 @@ var toDoSchema = new Schema({
 // lets you save and get find() todos
 var Todo = mongoose.model('todo', toDoSchema);
 
+
+
 // Middleware
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extended: true}));
 app.set('view engine', 'jade');
 
 app.get('/', function (req, res) {
@@ -26,6 +28,11 @@ app.get('/', function (req, res) {
 
 app.get('/new_item', function (req, res) {
   res.render('new_item');
+});
+
+// Reads in the server console logs {} objects
+app.post('/new_item', function (req, res) {
+  console.log(req.body);
 });
 
 app.get('/edit_item', function (req, res) {
