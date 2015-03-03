@@ -1,16 +1,15 @@
 extends ./layout.jade
 block content
   #container
-    for list in userlist
+    ul#toDoList
       p= list
-      ul#toDoList
-        li.item
+      for list in userlist
+        li.list
           input(type="checkbox" )
-          //- span.title= item.title
-          h3= list.title
+          span.title= list.title
           p= list.description
-          //- command shift right
-          button X
+          form(action="/list/#{list._id}?_method=DELETE", method="POST")
+            button X
 
   h1 to do list
   a(href="/new_item") New Item Page
