@@ -81,14 +81,32 @@ app.put('/edit_item/:id', function (req, res) {
   });
 });
 
+app.put('/list/:id/complete', function (req, res) {
+  var toDoId = req.params.id;
+  ToDo.findOneAndUpdate({_id : toDoId}, { $set: {
+    is_done : true
+  }}, function (err, todo){
+    if (err) throw err;
+    res.send('Okay');
+  });
+});
+
+app.put('/list/:id/uncomplete', function (req, res) {
+  var toUndoId = req.params.id;
+  ToDo.findOneAndUpdate({_id : toUndoId}, { $set: {
+    is_done : false
+  }}, function (err, todo){
+    if (err) throw err;
+    res.send('Okay');
+  });
+});
+
 app.delete('/list/:id', function (req, res){
   ToDo.remove({_id : req.params.id}, function (err){
     if (err) throw err;
     res.redirect('/');
   });
 });
-
-
 
 var server = app.listen(3000, function () {
 
