@@ -16,10 +16,15 @@ $(document).ready(function(){
       });
       // alert('sent PUT request to '+'/list/'+doc_id+'/uncomplete');
     }
+    counter();
   });
   // select all checkboxes with data of checked
   $("li.list input[data-checked=true]").prop('checked', true);
+  counter();
 });
 
-// if checked value is true
-// css will add a cross out class
+  // below is for the counter
+function counter (){
+  $(".itemsCompleted p span").text($(".list.completed").length); 
+  $(".itemsLeft p span").text($(".list").length - $(".list.completed").length);
+}

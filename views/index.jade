@@ -10,11 +10,17 @@ block content
         else
           li.list
             +listbody(list)
-
+    .itemsCompleted
+      p
+        span 5
+        | items completed
+    .itemsLeft
+      p
+        span 5
+        | items left
   h1 to do list
   a(href="/new_item") New Item Page
   a(href="/edit_item") Edit Item Page
-  
 mixin listbody(list)
   input(type="checkbox", data-list-id="#{list._id}", data-checked="#{list.is_done}")
   span.title
