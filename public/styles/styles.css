@@ -5,3 +5,24 @@ body{
 form.toDoForm{
   display: inline;
 }
+
+#toDoList{
+  background-color: white;
+  width: 600px;
+  margin: auto;
+  height: 400px;
+}
+
+.completed{
+  text-decoration: line-through;
+}
+/*.list{
+  display: block;
+  padding: 10px;
+  height: 10px;
+  text-align: center;
+  width: 100%;
+  background-color: red;
+  clear: both;
+  overflow: auto;
+}*/
