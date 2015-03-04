@@ -1,28 +1,106 @@
+@import url(http://fonts.googleapis.com/css?family=Abel);
 body{
   background-color: aqua;
+  font-family: 'Abel', sans-serif;
 }
 
 form.toDoForm{
   display: inline;
 }
 
-#toDoList{
-  background-color: white;
-  width: 600px;
-  margin: auto;
-  height: 400px;
-}
-
-.completed{
+.completed .title{
   text-decoration: line-through;
 }
-/*.list{
-  display: block;
-  padding: 10px;
-  height: 10px;
-  text-align: center;
-  width: 100%;
-  background-color: red;
-  clear: both;
-  overflow: auto;
+
+#container{
+  background-color: blue;
+  width: 400px;
+  margin: auto;
+}
+
+.header_container{
+  width: 400px;
+  margin: auto;
+}
+
+h1{
+  font-size: 20px;
+  float: left;
+}
+
+/*.new_item_link_box{
+  width: 400px;
+  height: 25px;
 }*/
+
+a.new_item_link{
+  height: 30px;
+  width: 100px;
+  padding: 5px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+}
+
+span.title{
+  height: 20px;
+  width: 200px;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: purple;  
+}
+
+span.description{
+  height: 20px;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  background-color: orange;
+  margin-left: 20px;
+}
+
+button{
+  float: right;
+  margin-top: 18px;
+  margin-right: 10px;
+  font-size: 15px;
+  background-color: transparent;
+  border: none !important;
+}
+
+
+.itemsCompleted{
+  background-color: pink;
+  float: left;
+}
+
+.itemsLeft{
+  background-color: aqua;
+  float: left;
+}
+
+
+ul{
+  display: block;
+  width: 400px;
+  background-color: red;
+  overflow: auto;
+}
+
+ul li{
+  list-style-type: none;
+}
+
+ul li:nth-child(even){
+  background-color: pink;
+}
+
+a{
+  text-decoration: none;
+}

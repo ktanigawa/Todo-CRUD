@@ -2,12 +2,16 @@ doctype
 html
   head
     script(type='text/javascript', src='http://code.jquery.com/jquery-1.10.2.min.js')
+    link(href='styles/reset.css', rel='stylesheet', media='screen')
     link(href='styles/styles.css', rel='stylesheet', media='screen')
     script(src='js/todo.js')
-    block title  
+    block title
       title To Do
   body
-    h1 layout
+    .header_container
+      h1 Accomplishit
+    .new_item_link_box
+      a(class="new_item_link" href="/new_item") + New Item
 
     block content
     include ./includes/foot

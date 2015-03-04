@@ -1,16 +1,16 @@
 $(document).ready(function(){ 
-  $("li.list input[type=checkbox]").change(function(){
+  $("li.list .checkbox input[type=checkbox]").change(function(){
     var doc_id = $(this).data('list-id');
 
     if( $(this).prop( "checked" ) ){
-      $(this).parent().addClass("completed");
+      $(this).parents("li").addClass("completed");
       // checkbox was checked
       $.ajax('/list/'+doc_id+'/complete', {
         method : "PUT"
       });
       // alert('sent PUT request to '+'/list/:id/complete');
     }else{
-      $(this).parent().removeClass("completed");
+      $(this).parents("li").removeClass("completed");
       $.ajax('/list/'+doc_id+'/uncomplete', {
         method : "PUT"
       });
