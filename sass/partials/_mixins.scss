@@ -1,0 +1,6 @@
+@mixin todo_font($todo_font_size:1em, $todo_font_color:$black, $todo_font_weight:300 ){
+  text-align: center;
+  font-size: $todo_font_size;
+  color: $todo_font_color;
+  font-weight: $todo_font_weight;
+}
