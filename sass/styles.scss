@@ -2,6 +2,8 @@
 @import "partials/mixins";
 @import "partials/settings";
 @import "partials/foundation";
+@import "foundation/components/buttons";
+@import "foundation/components/forms";
 
 body{
   background-color: $steel;
@@ -10,6 +12,14 @@ body{
 
 form.toDoForm{
   display: inline;
+}
+
+form.new_item_form{
+  background-color: blue;
+}
+
+form.edit_item_form{
+  background-color: pink;
 }
 
 .completed .title{
@@ -58,6 +68,7 @@ a.new_item_link{
   margin-left: 90px;
 }
 
+
 span.title{
   height: 20px;
   width: 70%;
@@ -83,12 +94,15 @@ span.description{
 button{
   float: right;
   width: 10%;
-  padding-top: 15px;
-  font-size: 15px;
+  margin-bottom: 5px;
+  font-size: 20px;
   background-color: transparent;
   border: none !important;
 }
 
+#checkbox1{
+  background-color: red;
+}
 
 .itemsCompleted{
   background-color: pink;
@@ -121,4 +135,11 @@ li.list{
 a{
   text-decoration: none;
   color: $grey_text;
+}
+
+.footer_container{
+  height: 50px;
+  width: 400px;
+  background-color: pink;
+  margin: auto;
 }
