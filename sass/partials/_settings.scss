@@ -89,7 +89,7 @@ $row-width: rem-calc(1200);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Abel", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "Abel", Helvetica, Arial, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
@@ -127,7 +127,7 @@ $white       : #FFFFFF;
 // $aluminum    : #999999;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
-// $steel       : #666666;
+$steel       : #666666;
 // $charcoal    : #555555;
 // $tuatara     : #444444;
 // $oil         : #333333;
