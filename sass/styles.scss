@@ -2,8 +2,6 @@
 @import "partials/mixins";
 @import "partials/settings";
 @import "partials/foundation";
-@import "foundation/components/buttons";
-@import "foundation/components/forms";
 
 body{
   background-color: $steel;
@@ -22,12 +20,29 @@ form.edit_item_form{
   background-color: pink;
 }
 
-.completed .title{
+a.aTitle{
+  color: $orange_text;
+  font-size: 20px;
+}
+
+li.list input[type=checkbox]{
+  display: none;
+}
+
+
+span.fakeCheckbox{
+  height: 27px;
+  width: 27px;
+  border: solid 1px black;
+}
+
+.completed .title a{
   text-decoration: line-through;
+  text-decoration-color: $grey_text;
+  color: $grey_text;
 }
 
 #container{
-  background-color: blue;
   width: 400px;
   margin: auto;
 }
@@ -35,45 +50,75 @@ form.edit_item_form{
 header{
   width: 400px;
   margin: auto;
+  height: 60px;
   background-color: $beige;
-}
-
-.header_container{
-  float: left;
-  width: 50%;
+  border-bottom: 1px solid $grey_line;
 }
 
 h1{
   font-size: 30px;
   float: left;
-  margin-left: 25px;
+  margin-left: 10px;
   color: $orange_text;
-  text-transform: uppercase;
 }
 
-.new_item_container{
+p{
+  margin-bottom: 0;
+}
+
+.headerContainer{
   float: left;
-  width: 50%;
-  margin-top: 15px;
+  width: 20%;
+  margin-left: 5px;
+  margin-top: 5px;
 }
 
-a.new_item_link{
-  height: 30px;
-  width: 100px;
+.counterContainer{
+  width: 40%;
+  float: left;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
+.itemsCompleted{
+  background-color: pink;
+  float: left;
+  height: 20px;
+  // width: 20%;
+}
+
+.itemsLeft{
+  background-color: aqua;
+  float: left;
+  height: 20px;
+  // width: 20%;
+}
+
+.newItemContainer{
+  float: left;
+  width: 25%;
+  margin-top: 8px;
   padding: 5px 10px;
   background-color: $orange_button;
-  color: $beige_text;
   text-align: center;
   border-radius: 3px;
-  margin-left: 90px;
+  margin-left: 30px;
+}
+// button link
+a.newItemLink{
+  color: $beige_text;
 }
 
+.checkbox{
+  // background-color: red;
+  margin-left: 15px;
+}
 
 span.title{
-  height: 20px;
-  width: 70%;
+  height: 30px;
+  width: 75%;
   margin-left: 15px;
-  background-color: purple;  
+  // color: $orange_text; 
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -81,9 +126,9 @@ span.title{
 }
 
 span.description{
-  height: 20px;
-  width: 70%;
-  background-color: orange;
+  // height: 20px;
+  width: 75%;
+  color: $grey_text;
   margin-left: 25px;
   white-space: nowrap;
   overflow: hidden;
@@ -94,32 +139,25 @@ span.description{
 button{
   float: right;
   width: 10%;
+  margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 25px;
   background-color: transparent;
   border: none !important;
+  color: $grey_text;
 }
 
-#checkbox1{
-  background-color: red;
-}
-
-.itemsCompleted{
-  background-color: pink;
-  float: left;
-}
-
-.itemsLeft{
-  background-color: aqua;
-  float: left;
+button:hover{
+  background-color: transparent;
+  color: $orange_text;
 }
 
 
 ul{
   display: block;
-  background-color: red;
-  overflow: auto;
+  background-color: salmon;
   margin-left: 0;
+  margin-bottom: 0;
 }
 
 ul li{
@@ -128,18 +166,23 @@ ul li{
 }
 
 li.list{
-  background-color: blue;
+  background-color: $beige;
   height: 75px;
 }
 
 a{
   text-decoration: none;
-  color: $grey_text;
 }
 
 .footer_container{
   height: 50px;
   width: 400px;
-  background-color: pink;
+  background-color: $orange_text;
   margin: auto;
+}
+
+p.footer{
+  text-align: center;
+  color: $light_grey;
+  padding-top: 10px;
 }
