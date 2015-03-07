@@ -18,6 +18,15 @@ $(document).ready(function(){
     }
     counter();
   });
+  $("span.fakeCheckbox").click(function(event){
+    var element = $(this).siblings("input[type=checkbox]");
+    if(element.prop("checked")){
+      element.prop('checked', false);    
+    } else {
+      element.prop('checked', true);   
+    }
+
+  });
   // select all checkboxes with data of checked
   $("li.list input[data-checked=true]").prop('checked', true);
   counter();

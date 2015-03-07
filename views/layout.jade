@@ -2,16 +2,26 @@ doctype
 html
   head
     script(type='text/javascript', src='http://code.jquery.com/jquery-1.10.2.min.js')
-    link(href='styles/reset.css', rel='stylesheet', media='screen')
-    link(href='styles/styles.css', rel='stylesheet', media='screen')
-    script(src='js/todo.js')
+    link(href='/css/styles.css', rel='stylesheet', media='screen')
+    link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+    script(src='/js/todo.js')
     block title
       title To Do
   body
-    .header_container
-      h1 Accomplishit
-    .new_item_link_box
-      a(class="new_item_link" href="/new_item") + New Item
+    header.clearfix
+      .headerContainer
+        h1 To Do
+      .counterContainer
+        .itemsLeft
+          p
+            span
+            |  incomplete
+        .itemsCompleted
+          p , 
+            span
+            |  complete
+      .newItemContainer
+        a(class="newItemLink" href="/new_item") + New Item
 
     block content
     include ./includes/foot

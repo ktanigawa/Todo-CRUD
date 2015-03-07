@@ -3,8 +3,7 @@ extends ./layout.jade
 block title
   title New Item
 block content
-  h1 New Item
-  form(action="/new_item", method="POST")
+  form(action="/new_item", method="POST", class="new_item_form")
     fieldset
       div
         input(type="text", name="title", placeholder="Title")

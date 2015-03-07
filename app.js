@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+var livereload = require('connect-livereload');
+var livereloadport = 35729;
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
@@ -22,10 +24,11 @@ var ToDo = mongoose.model('todo', toDoSchema);
 // Middleware
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true}));
-// go before set??
 app.use(methodOverride('_method'));
 app.set('view engine', 'jade');
 
+// Add live reload
+app.use(livereload({port: livereloadport}));
 // Gets list in userlist
 app.get('/', function (req, res) {
   // res.render('index');
@@ -108,7 +111,7 @@ app.delete('/list/:id', function (req, res){
   });
 });
 
-var server = app.listen(3000, function () {
+var server = app.listen( (process.env.PORT || 3000), function () {
 
   var host = server.address().address;
   var port = server.address().port;

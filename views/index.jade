@@ -10,23 +10,13 @@ block content
         else
           li.list
             +listbody(list)
-    .counterContainer
-      .itemsCompleted
-        p
-          span
-          | items completed, 
-      .itemsLeft
-        p
-          span
-          | items left
-  //- a(href="/new_item") New Item
-  a(href="/edit_item") Edit Item Page
 
 mixin listbody(list)
   .checkbox
-    input(type="checkbox", data-list-id="#{list._id}", data-checked="#{list.is_done}")
+    input(id="realCheckbox", type="checkbox", data-list-id="#{list._id}", data-checked="#{list.is_done}")
+    span.fakeCheckbox.fa.fa-check
     span.title
-      a(href="/edit_item/#{list._id}")= list.title
+      a(class="aTitle" href="/edit_item/#{list._id}")= list.title
     form.toDoForm(action="/list/#{list._id}?_method=DELETE", method="POST")
-      button X
-  span.description= list.description
+      button &times;
+    span.description= list.description
