@@ -4,7 +4,7 @@ block content
     ul#toDoList
       p= list
       for list in userlist
-        if list.is_done === true
+        if list.is_done
           li.list.completed
             +listbody(list)
         else
@@ -14,7 +14,10 @@ block content
 mixin listbody(list)
   .checkbox
     input(id="realCheckbox", type="checkbox", data-list-id="#{list._id}", data-checked="#{list.is_done}")
-    span.fakeCheckbox.fa.fa-check
+    if list.is_done
+      span.fakeCheckbox.fa.fa-check
+    else
+      span.fakeCheckbox.fa
     span.title
       a(class="aTitle" href="/edit_item/#{list._id}")= list.title
     form.toDoForm(action="/list/#{list._id}?_method=DELETE", method="POST")

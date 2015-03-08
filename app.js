@@ -41,6 +41,8 @@ app.get('/', function (req, res) {
 
 app.get('/new_item', function (req, res) {
   res.render('new_item');
+  // res.render('new_item', { todo : todo, userlist: lists, complete: complete, incomplete: incomplete});
+
 });
 
 // This route accepts user data from the client
@@ -68,8 +70,19 @@ app.post('/new_item', function (req, res) {
 
 app.get('/edit_item/:id', function (req, res) {
   ToDo.findOne({_id : req.params.id}, function (err, todo){
-    if (err) throw err;  
-    res.render('edit_item', { todo : todo});
+    ToDo.find(function (err, lists){
+      if (err) throw err;
+      var incomplete = 0;
+      var complete = 0;
+      lists.forEach(function (item){
+        if (item.is_done){
+          complete++;
+        } else {
+          incomplete++;
+        }
+      });
+      res.render('edit_item', { todo : todo, userlist: lists, complete: complete, incomplete: incomplete});
+    });
   });
 });
 //updates uses put

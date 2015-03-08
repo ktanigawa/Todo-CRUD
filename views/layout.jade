@@ -6,19 +6,19 @@ html
     link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
     script(src='/js/todo.js')
     block title
-      title To Do
+      title To Do List
   body
     header.clearfix
       .headerContainer
-        h1 To Do
+        a(class="titleLink" href="/") To Do
       .counterContainer
         .itemsLeft
           p
-            span
+            span= incomplete
             |  incomplete
         .itemsCompleted
           p , 
-            span
+            span= complete
             |  complete
       .newItemContainer
         a(class="newItemLink" href="/new_item") + New Item

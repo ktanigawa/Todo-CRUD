@@ -3020,15 +3020,23 @@ form.edit_item_form {
 
 a.aTitle {
   color: #F86921;
-  font-size: 20px; }
+  font-size: 20px;
+  width: 200px; }
 
 li.list input[type=checkbox] {
-  display: none; }
+  display: none;
+  vertical-align: top; }
 
 span.fakeCheckbox {
   height: 27px;
   width: 27px;
-  border: solid 1px black; }
+  border: solid 1px #DBDDCB;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 4px;
+  padding-top: 3px;
+  margin-top: 30px;
+  color: #F1863C; }
 
 .completed .title a {
   text-decoration: line-through;
@@ -3046,11 +3054,12 @@ header {
   background-color: #EDEFDD;
   border-bottom: 1px solid #DBDDCB; }
 
-h1 {
+a.titleLink {
   font-size: 30px;
   float: left;
   margin-left: 10px;
-  color: #F86921; }
+  color: #F86921;
+  margin-top: 1px; }
 
 p {
   margin-bottom: 0; }
@@ -3062,20 +3071,20 @@ p {
   margin-top: 5px; }
 
 .counterContainer {
-  width: 40%;
+  width: 45%;
   float: left;
   margin-left: 5px;
   margin-top: 20px; }
 
 .itemsCompleted {
-  background-color: pink;
   float: left;
-  height: 20px; }
+  height: 20px;
+  color: #B1B2A2; }
 
 .itemsLeft {
-  background-color: aqua;
   float: left;
-  height: 20px; }
+  height: 20px;
+  color: #F86921; }
 
 .newItemContainer {
   float: left;
@@ -3085,37 +3094,42 @@ p {
   background-color: #F1863C;
   text-align: center;
   border-radius: 3px;
-  margin-left: 30px; }
+  margin-left: 15px; }
 
 a.newItemLink {
   color: #E0E4CD; }
 
 .checkbox {
-  margin-left: 15px; }
+  margin-left: 15px;
+  display: block;
+  flex: none;
+  width: 400px; }
 
 span.title {
-  height: 30px;
-  width: 75%;
+  width: 200px;
+  flex: 1;
   margin-left: 15px;
+  margin-top: 25px;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
 
 span.description {
-  width: 75%;
+  width: 300px;
   color: #B1B2A2;
-  margin-left: 25px;
+  margin-left: 40px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: block; }
+  display: inline-block; }
 
 button {
   float: right;
-  width: 10%;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  width: 20px;
+  height: 40px;
+  flex: none;
+  margin-right: 15px;
   font-size: 25px;
   background-color: transparent;
   border: none !important;
@@ -3127,7 +3141,6 @@ button:hover {
 
 ul {
   display: block;
-  background-color: salmon;
   margin-left: 0;
   margin-bottom: 0; }
 
@@ -3136,8 +3149,7 @@ ul li {
   border-bottom: 1px solid #DBDDCB; }
 
 li.list {
-  background-color: #EDEFDD;
-  height: 75px; }
+  background-color: #EDEFDD; }
 
 a {
   text-decoration: none; }
