@@ -125,6 +125,7 @@ a.newItemLink{
 
 span.title{
   width: 200px;
+  // color: $orange_text;
   flex: 1;
   margin-left: 15px;
   margin-top: 25px;
@@ -187,12 +188,12 @@ a{
 .footer_container{
   height: 50px;
   width: 400px;
-  background-color: $orange_text;
+  background-color: $light_grey;
   margin: auto;
 }
 
 p.footer{
   text-align: center;
-  color: $light_grey;
+  color: $grey_text;
   padding-top: 10px;
 }
