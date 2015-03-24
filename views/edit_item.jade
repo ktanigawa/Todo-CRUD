@@ -5,10 +5,10 @@ block title
 block content
   form(action="/edit_item/#{todo._id}?_method=PUT", method="POST", class="edit_item_form")
     fieldset
-      div
+      .titleBox
         input(type="text", name="title", value="#{todo.title}", class="edit_item_input")
-      div
+      .textBox
         textarea(type="text", name="description", class="edit_item_textarea")
           =todo.description
-      div
+      .submitBox
         input(type="submit", value="Submit", class="edit_item_submit")

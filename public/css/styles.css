@@ -3009,37 +3009,47 @@ body {
   background-color: #666666;
   font-family: 'Abel', sans-serif; }
 
+fieldset {
+  margin: 0; }
+
 form.toDoForm {
   display: inline; }
 
-form.new_item_form {
-  background-color: blue; }
-
-form.edit_item_form {
+form.new_item_form, form.edit_item_form {
   background-color: #EDEFDD;
   width: 400px;
   margin: auto; }
 
-input.edit_item_input {
+.titleToDo {
+  color: red; }
+
+input.edit_item_input, input.new_item_input {
   background-color: #EDEFDD;
   color: #F86921;
+  font-size: 20px;
   width: 356px;
   margin: auto;
   border: solid 1px #DBDDCB; }
 
-input.edit_item_submit {
-  background-color: #EDEFDD;
-  border: 1px solid #DBDDCB;
+input.edit_item_submit, input.new_item_submit {
+  font-size: 12px;
   height: 30px;
   width: 100px;
   margin-top: 10px;
-  color: #F86921; }
+  background-color: #F86921;
+  border: none;
+  color: #EDEFDD;
+  border-radius: 3px; }
 
-textarea.edit_item_textarea {
+input.edit_item_submit:hover, input.new_item_submit:hover {
+  background-color: #F1863C;
+  color: #EDEFDD; }
+
+textarea.edit_item_textarea, textarea.new_item_textarea {
   background-color: #EDEFDD;
   width: 356px;
   color: #B1B2A2;
-  font-size: 16px;
+  font-size: 20px;
   margin: auto;
   margin-top: 15px;
   height: 200px;
@@ -3123,6 +3133,9 @@ p {
   text-align: center;
   border-radius: 3px;
   margin-left: 15px; }
+
+.newItemContainer:hover {
+  background-color: #F86921; }
 
 a.newItemLink {
   color: #E0E4CD; }

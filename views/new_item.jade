@@ -5,9 +5,9 @@ block title
 block content
   form(action="/new_item", method="POST", class="new_item_form")
     fieldset
-      div
+      .titleBox
         input(type="text", name="title", placeholder="Title", class="new_item_input")
-      div
+      .textBox
         textarea(type="text", name="description", placeholder="Box", class="new_item_textarea")
-      div
+      .submitBox
         input(type="submit", value="Submit", class="new_item_submit")

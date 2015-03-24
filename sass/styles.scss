@@ -8,42 +8,57 @@ body{
   font-family: 'Abel', sans-serif;
 }
 
+fieldset{
+  margin: 0;
+}
 form.toDoForm{
   display: inline;
 }
 
-form.new_item_form{
-  background-color: blue;
-}
-
+form.new_item_form,
 form.edit_item_form{
   background-color: $beige;
   width: 400px;
   margin: auto;
 }
-
-input.edit_item_input{
+.titleToDo{
+  color: red;
+}
+input.edit_item_input,
+input.new_item_input{
   background-color: $beige;
   color: $orange_text;
+  font-size: 20px;
   width: 356px;
   margin: auto;
   border: solid 1px $grey_line;
 }
 
-input.edit_item_submit{
-  background-color: $beige;
-  border: 1px solid $grey_line;
+input.edit_item_submit,
+input.new_item_submit{
+  // background-color: $beige;
+  // border: 1px solid $grey_line;
+  font-size: 12px;
   height: 30px;
   width: 100px;
   margin-top: 10px;
-  color: $orange_text;
+  background-color: $orange_text;
+  border: none;
+  color: $beige;
+  border-radius: 3px;
+}
+input.edit_item_submit:hover,
+input.new_item_submit:hover{
+  background-color: $orange_button;
+  color: $beige;
 }
 
-textarea.edit_item_textarea{
+textarea.edit_item_textarea,
+textarea.new_item_textarea{
   background-color: $beige;
   width: 356px;
   color: $grey_text;
-  font-size: 16px;
+  font-size: 20px;
   margin: auto;
   margin-top: 15px;
   height: 200px;
@@ -141,7 +156,11 @@ p{
   border-radius: 3px;
   margin-left: 15px;
 }
-// button link
+
+.newItemContainer:hover{
+  background-color: $orange_text;
+}
+
 a.newItemLink{
   color: $beige_text;
 }
