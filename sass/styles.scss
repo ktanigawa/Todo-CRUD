@@ -17,9 +17,38 @@ form.new_item_form{
 }
 
 form.edit_item_form{
-  background-color: pink;
+  background-color: $beige;
+  width: 400px;
+  margin: auto;
 }
 
+input.edit_item_input{
+  background-color: $beige;
+  color: $orange_text;
+  width: 356px;
+  margin: auto;
+  border: solid 1px $grey_line;
+}
+
+input.edit_item_submit{
+  background-color: $beige;
+  border: 1px solid $grey_line;
+  height: 30px;
+  width: 100px;
+  margin-top: 10px;
+  color: $orange_text;
+}
+
+textarea.edit_item_textarea{
+  background-color: $beige;
+  width: 356px;
+  color: $grey_text;
+  font-size: 16px;
+  margin: auto;
+  margin-top: 15px;
+  height: 200px;
+  border: solid 1px $grey_line;
+}
 a.aTitle{
   color: $orange_text;
   font-size: 20px;
@@ -59,7 +88,7 @@ header{
   width: 400px;
   margin: auto;
   height: 60px;
-  background-color: $beige;
+  background-color: $light_grey;
   border-bottom: 1px solid $grey_line;
 }
 
@@ -69,6 +98,7 @@ a.titleLink{
   margin-left: 10px;
   color: $orange_text;
   margin-top: 1px;
+  letter-spacing: -1.5px;
 }
 
 p{
@@ -85,7 +115,7 @@ p{
 .counterContainer{
   width: 45%;
   float: left;
-  margin-left: 5px;
+  margin-left: 2px;
   margin-top: 20px;
 }
 
@@ -104,7 +134,7 @@ p{
 .newItemContainer{
   float: left;
   width: 25%;
-  margin-top: 8px;
+  margin-top: 12px;
   padding: 5px 10px;
   background-color: $orange_button;
   text-align: center;

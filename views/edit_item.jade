@@ -6,9 +6,9 @@ block content
   form(action="/edit_item/#{todo._id}?_method=PUT", method="POST", class="edit_item_form")
     fieldset
       div
-        input(type="text", name="title", value="#{todo.title}")
+        input(type="text", name="title", value="#{todo.title}", class="edit_item_input")
       div
-        textarea(type="text", name="description")
+        textarea(type="text", name="description", class="edit_item_textarea")
           =todo.description
       div
-        input(type="submit", value="Submit")
+        input(type="submit", value="Submit", class="edit_item_submit")
