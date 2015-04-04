@@ -4,7 +4,7 @@
 @import "partials/foundation";
 
 body{
-  background-color: $steel;
+  background-image: url(/images/zwartevilt.png);
   font-family: 'Abel', sans-serif;
 }
 
@@ -17,16 +17,16 @@ form.toDoForm{
 
 form.new_item_form,
 form.edit_item_form{
-  background-color: $beige;
+  background-image: url(/images/sos.png);
+  // background-color: $beige;
   width: 400px;
   margin: auto;
 }
-.titleToDo{
-  color: red;
-}
+
 input.edit_item_input,
 input.new_item_input{
-  background-color: $beige;
+  background-image: url(/images/sos.png);
+  // background-color: $beige;
   color: $orange_text;
   font-size: 20px;
   width: 356px;
@@ -36,8 +36,6 @@ input.new_item_input{
 
 input.edit_item_submit,
 input.new_item_submit{
-  // background-color: $beige;
-  // border: 1px solid $grey_line;
   font-size: 12px;
   height: 30px;
   width: 100px;
@@ -55,7 +53,8 @@ input.new_item_submit:hover{
 
 textarea.edit_item_textarea,
 textarea.new_item_textarea{
-  background-color: $beige;
+  // background-color: $beige;
+  background-image: url(/images/sos.png);
   width: 356px;
   color: $grey_text;
   font-size: 20px;
@@ -68,6 +67,7 @@ a.aTitle{
   color: $orange_text;
   font-size: 20px;
   width: 200px;
+  text-shadow: 0px 2px 3px #FFFFFF;
 }
 
 li.list input[type=checkbox]{
@@ -81,10 +81,16 @@ span.fakeCheckbox{
   border: solid 1px $grey_line;
   display: inline-block;
   vertical-align: top;
-  padding-left: 4px;
-  padding-top: 3px;
+  padding-left: 6px;
+  padding-top: 4px;
   margin-top: 30px;
   color: $orange_button;
+  background-color: #FFFFFF;
+  box-shadow:
+    rgba(0,0,0,0.2)
+    2px 2px
+    inset
+  text-shadow: 0px 1px 2px #FFFFFF;
 }
 
 
@@ -103,7 +109,7 @@ header{
   width: 400px;
   margin: auto;
   height: 60px;
-  background-color: $light_grey;
+  background-image: url(/images/seamless_paper_texture.png);
   border-bottom: 1px solid $grey_line;
 }
 
@@ -114,6 +120,7 @@ a.titleLink{
   color: $orange_text;
   margin-top: 1px;
   letter-spacing: -1.5px;
+  text-shadow: 0px 1px 2px #FFF;
 }
 
 p{
@@ -138,12 +145,14 @@ p{
   float: left;
   height: 20px;
   color: $grey_text;
+  text-shadow: 0px 1px 2px #FFF;  
 }
 
 .itemsLeft{
   float: left;
   height: 20px;
   color: $orange_text;
+  text-shadow: 0px 1px 2px #FFF;
 }
 
 .newItemContainer{
@@ -174,7 +183,6 @@ a.newItemLink{
 
 span.title{
   width: 200px;
-  // color: $orange_text;
   flex: 1;
   margin-left: 15px;
   margin-top: 25px;
@@ -200,12 +208,11 @@ button{
   height: 40px;
   flex: none;
   margin-right: 15px;
-  // margin-top: 5px;
-  // margin-bottom: 5px;
   font-size: 25px;
   background-color: transparent;
   border: none !important;
   color: $grey_text;
+  text-shadow: 0px 3px 4px #FFF;
 }
 
 button:hover{
@@ -226,8 +233,8 @@ ul li{
 }
 
 li.list{
-  background-color: $beige;
-  // height: 75px;
+  background-image: url(/images/sos.png);
+  // background-color: $beige;
 }
 
 a{
@@ -237,7 +244,7 @@ a{
 .footer_container{
   height: 50px;
   width: 400px;
-  background-color: $light_grey;
+  background-image: url(/images/seamless_paper_texture.png);
   margin: auto;
 }
 
@@ -245,4 +252,5 @@ p.footer{
   text-align: center;
   color: $grey_text;
   padding-top: 10px;
+  text-shadow: 0px 1px 2px #FFF;
 }

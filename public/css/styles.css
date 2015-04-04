@@ -3006,7 +3006,7 @@ th.hide-for-touch {
     display: table-cell !important; } }
 
 body {
-  background-color: #666666;
+  background-image: url(/images/zwartevilt.png);
   font-family: 'Abel', sans-serif; }
 
 fieldset {
@@ -3016,15 +3016,12 @@ form.toDoForm {
   display: inline; }
 
 form.new_item_form, form.edit_item_form {
-  background-color: #EDEFDD;
+  background-image: url(/images/sos.png);
   width: 400px;
   margin: auto; }
 
-.titleToDo {
-  color: red; }
-
 input.edit_item_input, input.new_item_input {
-  background-color: #EDEFDD;
+  background-image: url(/images/sos.png);
   color: #F86921;
   font-size: 20px;
   width: 356px;
@@ -3046,7 +3043,7 @@ input.edit_item_submit:hover, input.new_item_submit:hover {
   color: #EDEFDD; }
 
 textarea.edit_item_textarea, textarea.new_item_textarea {
-  background-color: #EDEFDD;
+  background-image: url(/images/sos.png);
   width: 356px;
   color: #B1B2A2;
   font-size: 20px;
@@ -3070,10 +3067,12 @@ span.fakeCheckbox {
   border: solid 1px #DBDDCB;
   display: inline-block;
   vertical-align: top;
-  padding-left: 4px;
-  padding-top: 3px;
+  padding-left: 6px;
+  padding-top: 4px;
   margin-top: 30px;
-  color: #F1863C; }
+  color: #F1863C;
+  background-color: #EDEFDD;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px inset; }
 
 .completed .title a {
   text-decoration: line-through;
@@ -3088,7 +3087,7 @@ header {
   width: 400px;
   margin: auto;
   height: 60px;
-  background-color: #D2D4C1;
+  background-image: url(/images/seamless_paper_texture.png);
   border-bottom: 1px solid #DBDDCB; }
 
 a.titleLink {
@@ -3097,7 +3096,8 @@ a.titleLink {
   margin-left: 10px;
   color: #F86921;
   margin-top: 1px;
-  letter-spacing: -1.5px; }
+  letter-spacing: -1.5px;
+  text-shadow: 0px 1px 2px #FFF; }
 
 p {
   margin-bottom: 0; }
@@ -3117,12 +3117,14 @@ p {
 .itemsCompleted {
   float: left;
   height: 20px;
-  color: #B1B2A2; }
+  color: #B1B2A2;
+  text-shadow: 0px 1px 2px #FFF; }
 
 .itemsLeft {
   float: left;
   height: 20px;
-  color: #F86921; }
+  color: #F86921;
+  text-shadow: 0px 1px 2px #FFF; }
 
 .newItemContainer {
   float: left;
@@ -3190,7 +3192,7 @@ ul li {
   border-bottom: 1px solid #DBDDCB; }
 
 li.list {
-  background-color: #EDEFDD; }
+  background-image: url(/images/sos.png); }
 
 a {
   text-decoration: none; }
@@ -3198,10 +3200,11 @@ a {
 .footer_container {
   height: 50px;
   width: 400px;
-  background-color: #D2D4C1;
+  background-image: url(/images/seamless_paper_texture.png);
   margin: auto; }
 
 p.footer {
   text-align: center;
   color: #B1B2A2;
-  padding-top: 10px; }
+  padding-top: 10px;
+  text-shadow: 0px 1px 2px #FFF; }
